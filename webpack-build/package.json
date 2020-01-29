@@ -1,0 +1,24 @@
+{
+  "name": "webpack-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./webpack.config.js"
+  },
+  "keywords": [],
+  "author": "Chau Tran",
+  "license": "ISC",
+  "devDependencies": {
+    "@nartc/automapper-transformer-plugin": "^1.0.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@nartc/automapper": "^3.2.0",
+    "reflect-metadata": "^0.1.13"
+  }
+}
