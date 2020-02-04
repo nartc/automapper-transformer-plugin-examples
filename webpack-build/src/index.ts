@@ -52,7 +52,9 @@ user.addresses = Array.from({ length: 2 }).map((_, index) => {
   return addr;
 });
 
-const plainObj = JSON.parse(JSON.stringify(user));
-
-const vm = Mapper.map(plainObj, UserVm, User);
+const vm = Mapper.map(user, UserVm);
 console.log(vm);
+
+const plainObj = JSON.parse(JSON.stringify(user));
+const vmFromPlain = Mapper.map(plainObj, UserVm, User);
+console.log(vmFromPlain);
