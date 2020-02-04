@@ -1,3 +1,4 @@
+import { AddressVm } from './address.vm';
 import { ProfileVm } from './profile.vm';
 
 export class UserVm {
@@ -5,4 +6,5 @@ export class UserVm {
   last!: string;
   full!: string;
   profile!: ProfileVm;
+  addresses!: AddressVm[];
 }

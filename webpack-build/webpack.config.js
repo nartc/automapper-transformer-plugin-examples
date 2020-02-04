@@ -3,6 +3,7 @@ const tsAutomapperPlugin = require('@nartc/automapper-transformer-plugin').defau
 
 module.exports = {
   mode: 'development',
+  devtool: "inline-source-map",
   entry: './src/index.ts',
   output: {
     filename: 'bundle.js',
