@@ -1,10 +1,9 @@
-import { AddressVm } from './address.vm';
-import { ProfileVm } from './profile.vm';
+import ContactVm from './contact.model';
 
-export class UserVm {
-  first!: string;
-  last!: string;
-  full!: string;
-  profile!: ProfileVm;
-  addresses!: AddressVm[];
+
+export default class UserVm {
+  fullName!: string;
+  isActive!: boolean;
+  contact!: ContactVm | null;
+  age?: number;
 }

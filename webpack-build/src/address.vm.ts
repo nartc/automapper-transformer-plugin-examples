@@ -1,3 +1,5 @@
-export class AddressVm {
-  formattedStreet!: string;
+export default class AddressVM {
+    name!: string;
+    street!: string;
+    city!: string;
 }
