@@ -11,6 +11,6 @@ export default class User {
   isActive!: boolean;
   contact!: Contact | null;
   age?: number;
-  // @AutoMap(() => Gender) // enum hasn't supported 
-  // gender!: Gender | null; // TypeError: Cannot read property 'transformFlags' of undefined
+  @AutoMap() // enums can be supported only with the @AutoMap decorator
+  gender!: Gender | null;
 }

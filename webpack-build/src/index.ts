@@ -9,6 +9,7 @@ import Phone from './phone.model';
 import PhoneVm from './phone.vm';
 import User from './user.model';
 import UserVm from './user.vm';
+import Gender from './gender';
 
 
 function joinNonEmpty(separator: string, ...args: Array<string | null | undefined>) {
@@ -94,12 +95,14 @@ user1.lastName = 'Morrison';
 user1.middleName = 'T.';
 user1.isActive = true;
 user1.age = 24;
+user1.gender = Gender.Female;
 user1.contact = contact1;
 
 const user2 = new User();
 user2.firstName = 'Jayden';
 user2.lastName = 'Ward';
 user2.isActive = false;
+user2.gender = Gender.Male;
 user2.contact = contact2;
 
 const vm = Mapper.map(user1, UserVm);
