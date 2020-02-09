@@ -1,5 +1,9 @@
 const path = require('path');
-const tsAutomapperPlugin = require('@nartc/automapper-transformer-plugin').default;
+const tsAutoMapperPlugin = require('@nartc/automapper-transformer-plugin').default;
+const tsAutoMapperPluginOptions = {
+  modelFileNameSuffix: ['Model.ts', 'ViewModel.ts']
+};
+
 
 module.exports = {
   mode: 'development',
@@ -11,7 +15,8 @@ module.exports = {
   },
   resolve: {
     // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
+    modules: ['src', 'node_modules'],
   },
   module: {
     rules: [
@@ -20,7 +25,7 @@ module.exports = {
         loader: 'ts-loader',
         options: {
           getCustomTransformers: program => ({
-            before: [tsAutomapperPlugin(program).before]
+            before: [tsAutoMapperPlugin(program, tsAutoMapperPluginOptions).before]
           })
         }
       }

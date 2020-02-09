@@ -1,4 +1,4 @@
-export default class Phone {
+export default class PhoneModel {
     phoneNumber!: string;
     phoneExtension: string | undefined;
 }
